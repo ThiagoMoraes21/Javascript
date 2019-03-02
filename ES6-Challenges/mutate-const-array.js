@@ -1,4 +1,6 @@
 // Mutate an Array Declared with const
+'use strict';
+
 const arr = [5, 7, 2];
 console.log(arr);
 
