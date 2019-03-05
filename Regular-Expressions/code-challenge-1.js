@@ -6,6 +6,15 @@
 'use strict';
 
 function regexVar() {
+//  ^ => first item matches:
+// () => stores matching value captured within
+// [aeiou] => matches any of the characters in the brackets
+// . => matches any character:
+// * => for 0 or more occurrances of any character
+// \1 => matches to previously stored match. 
+    // \2 looks for matched item stored 2 instances ago 
+    // \3 looks for matched item stored 3 ago, etc
+//  $ ensures that matched item is at end of the sequence
     const re = /^([aeiou]).*\1$/;
     return re;
 }
