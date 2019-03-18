@@ -14,6 +14,8 @@ function getPosts() {
     }, 1000);
 }
 
+
+//  A fucntion that is passed as an argument in another function, is called CALLBACK FUNCTION
 function createPost(post, callback) {
     // faking interaction with a server 
     setTimeout(() => {

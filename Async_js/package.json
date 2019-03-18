@@ -1,0 +1,15 @@
+{
+  "name": "async_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "callbacks.js",
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago",
+  "license": "ISC"
+}
