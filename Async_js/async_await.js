@@ -16,7 +16,6 @@ function getPosts() {
     }, 100);
 }
 
-
 function createPost(post) {
     return new Promise((resolve, reject) => {
         // faking interaction with a server 
