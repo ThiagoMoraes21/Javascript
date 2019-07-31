@@ -4,7 +4,7 @@ function getHours(h) {
     let dur = moment.duration(h, 'hours');
     let hours = Math.floor(dur.asHours());
     let mins = Math.floor(dur.asMinutes()) - hours * 60;
-    let sec = Math.floor(dur.asSeconds()) - hours * 60 * 60 - mins * 60;
+    let secs = Math.floor(dur.asSeconds()) - hours * 60 * 60 - mins * 60;
 
     let result =   ((hours > 9) ? hours : ("0" + hours)) + ":"
                  + ((mins > 9)  ? mins  : ("0" + mins))  + ":" 
