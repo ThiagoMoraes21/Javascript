@@ -1,0 +1,66 @@
+html, body {
+    height: 100vh;
+    background-color: #272727;
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#chat {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 { 
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+input {
+    width: 600px;
+    height: 50px;
+    border: 1px solid #404040;
+    padding: 0 20px;
+    font-size: 1rem;
+    background-color: #404040;
+    color: #fff;
+}
+
+button {
+    width: 600px;
+    height: 50px;
+    font-size: 1rem;
+    background: rgb(0, 151, 226);
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+    border: 1px solid #404040;
+}
+
+.messages {
+    width: 600px;
+    height: 400px;
+    margin: 20px 0;
+    border: 1px solid #404040;
+    padding: 20px;
+    background-color: #404040;
+    color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+.username {
+    color: rgb(0, 151, 226);
+    display: inline-block;
+}
