@@ -14,24 +14,30 @@
  */
 
 
-const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
-function disemvowel(str) {
-    const res = str.split(' ').map(el => {
-        return filterWord(el);
-    });
-    return res.map(el => el.join('')).join(' ');
-}
+// const vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'];
+// function disemvowel(str) {
+//     const res = str.split(' ').map(el => {
+//         return filterWord(el);
+//     });
+//     return res.map(el => el.join('')).join(' ');
+// }
 
-function filterWord(str) {
-    let word = str.split('');
-    vowels.forEach(el => {
-        if(str.includes(el)) {
-            let remove = word.join('').indexOf(el);
-            word.splice(remove, 1);
-            return word;
-        }
-    });
-    return word;
+// function filterWord(str) {
+//     let word = str.split('');
+//     vowels.forEach(el => {
+//         if(str.includes(el)) {
+//             let remove = word.join('').indexOf(el);
+//             word.splice(remove, 1);
+//             return word;
+//         }
+//     });
+//     return word;
+// }
+
+
+// regular expression to remove all vowels
+function disemvowel(str) {
+    return str.replace(/[aeiou]/ig, '');
 }
 
 // tests
