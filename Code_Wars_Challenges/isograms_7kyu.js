@@ -20,6 +20,11 @@ function isIsogram(str) {
     })
 }
 
+// clever solution
+function isIsogramRegex(str) {
+    return !/(\w).*\1/i.test(str)
+}
+
 // tests
 const Test = {
     assertSimilar: (output, expected, message) => {
@@ -34,3 +39,10 @@ Test.assertSimilar(isIsogram("aba"), false, "same chars may not be adjacent");
 Test.assertSimilar(isIsogram("moOse"), false, "same chars may not be same case");
 Test.assertSimilar(isIsogram("isIsogram"), false, "same chars may not be same case");
 Test.assertSimilar(isIsogram(""), true, "an empty string is a valid isogram");
+
+Test.assertSimilar(isIsogramRegex("Dermatoglyphics"), true);
+Test.assertSimilar(isIsogramRegex("isogram"), true);
+Test.assertSimilar(isIsogramRegex("aba"), false, "same chars may not be adjacent");
+Test.assertSimilar(isIsogramRegex("moOse"), false, "same chars may not be same case");
+Test.assertSimilar(isIsogramRegex("isIsogram"), false, "same chars may not be same case");
+Test.assertSimilar(isIsogramRegex(""), true, "an empty string is a valid isogram");
