@@ -7,6 +7,7 @@
     Note: The function accepts an integer and returns an integer
 */
 
+// brute force
 function squareDigits(num) {
     let arr = JSON.stringify(num).split('');
     let res = [];
@@ -17,12 +18,24 @@ function squareDigits(num) {
     return parseInt(res.join(''));
 }
 
+// clever solution
+function squareDigits_clever(num){
+    return Number((
+        num
+        .toString()
+        .split('')
+        .map(el => Math.pow(parseInt(el), 2))
+        .join('')
+    ));
+}
+
 // tests
 const Test = {
-    assertEquals: (output, shouldBe) => {
-        return output === shouldBe ?
-        console.log('Test passed!') : console.log(`Test failed: ${output} should be ${shouldBe}`);
+    assertEquals: (output, expected) => {
+        return output === expected ?
+        console.log('Test passed!') : console.log(`Test failed: ${output} should be ${expected}`);
     }
 }
 
 Test.assertEquals(squareDigits(9119), 811181);
+Test.assertEquals(squareDigits_clever(9119), 811181);
