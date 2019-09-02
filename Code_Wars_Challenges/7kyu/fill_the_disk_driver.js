@@ -28,6 +28,16 @@ function save(sizes, hd) {
     }).length;
 }
 
+// good practice
+function _save(sizes, hd) {
+    let i = -1;
+    while (hd >= 0) {
+        hd -= sizes.shift();
+        i++;
+    }
+    return i;
+}
+
 // test 
 const Test = {
     strictEqual: (output, expected) => {
@@ -44,11 +54,16 @@ Test.strictEqual(save([1, 2, 3, 4], 250), 4);
 Test.strictEqual(save([100], 500), 1);
 Test.strictEqual(save([11, 13, 15, 17, 19], 8), 0);
 Test.strictEqual(save([45], 12), 0);
-Test.strictEqual(
-    save([0, 0, 2, 11, 20, 7, 11, 7, 0, 15, 7, 1, 19, 7, 10, 5, 0, 12, 10, 20, 13, 11, 17, 6, 0], 25),
-    4
-)
-Test.strictEqual(
-    save([0, 11, 10, 2, 6, 12, 0, 4, 0, 15, 5, 3, 8, 9, 1, 14, 11, 7, 1, 0, 5, 11, 1, 14, 6, 4, 10, 2, 17, 0, 19, 15, 14, 9, 8, 4, 7, 9, 2, 3, 20, 18, 1, 9, 6, 3], 45),
-    9
-)
+Test.strictEqual(save([0, 0, 2, 11, 20, 7, 11, 7, 0, 15, 7, 1, 19, 7, 10, 5, 0, 12, 10, 20, 13, 11, 17, 6, 0], 25), 4);
+Test.strictEqual(save([0, 11, 10, 2, 6, 12, 0, 4, 0, 15, 5, 3, 8, 9, 1, 14, 11, 7, 1, 0, 5, 11, 1, 14, 6, 4, 10, 2, 17, 0, 19, 15, 14, 9, 8, 4, 7, 9, 2, 3, 20, 18, 1, 9, 6, 3], 45), 9);
+
+Test.strictEqual(_save([4, 4, 4, 3, 3], 12), 3);
+Test.strictEqual(_save([4, 4, 4, 3, 3], 11), 2);
+Test.strictEqual(_save([4, 8, 15, 16, 23, 42], 108), 6);
+Test.strictEqual(_save([13], 13), 1);
+Test.strictEqual(_save([1, 2, 3, 4], 250), 4);
+Test.strictEqual(_save([100], 500), 1);
+Test.strictEqual(_save([11, 13, 15, 17, 19], 8), 0);
+Test.strictEqual(_save([45], 12), 0);
+Test.strictEqual(_save([0, 0, 2, 11, 20, 7, 11, 7, 0, 15, 7, 1, 19, 7, 10, 5, 0, 12, 10, 20, 13, 11, 17, 6, 0], 25), 4);
+Test.strictEqual(_save([0, 11, 10, 2, 6, 12, 0, 4, 0, 15, 5, 3, 8, 9, 1, 14, 11, 7, 1, 0, 5, 11, 1, 14, 6, 4, 10, 2, 17, 0, 19, 15, 14, 9, 8, 4, 7, 9, 2, 3, 20, 18, 1, 9, 6, 3], 45), 9);
