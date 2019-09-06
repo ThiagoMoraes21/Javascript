@@ -35,7 +35,7 @@ function binary_opt(arr) {
     });
 }
 
-// cleer 
+// clever 
 function binary_clever(arr) {
     return parseInt(arr.join(''), 2);
 }
