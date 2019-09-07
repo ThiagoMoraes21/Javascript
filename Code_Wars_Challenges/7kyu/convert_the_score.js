@@ -26,8 +26,6 @@ function scoreboard(string) {
     return string.split(' ').filter(el => numbers.includes(el)).map(el => numbers.indexOf(el));
 }
 
-
-
 // tests
 const Test = {
     assertSimilar: (output, expected) => {
