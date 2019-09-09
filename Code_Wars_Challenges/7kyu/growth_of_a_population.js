@@ -34,7 +34,6 @@
 
 // brute force
 function nbYear(p0, percent, aug, p) {
-    // 1000 + 1000 * 0.02 + 50 => 1070 inhabitants
     let years = 0;
     let total = p0;
     let perc = total * (percent / 100);
