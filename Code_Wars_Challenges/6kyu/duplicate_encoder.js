@@ -32,8 +32,8 @@ function duplicateEncode_opt(word) {
   return word
     .toLowerCase()
     .split("")
-    .map(function(a, i, w) {
-      return w.indexOf(a) == w.lastIndexOf(a) ? "(" : ")";
+    .map((el, index, arr) => {
+      return arr.indexOf(el) == arr.lastIndexOf(el) ? "(" : ")";
     })
     .join("");
 }
